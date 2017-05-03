@@ -26,7 +26,7 @@ trait DateTimeTrait
     {
         $this->initializeDate($field);
         if (!$value) {
-            $new = $this->{$field}->setDate(0, 0, 0);
+            $new = $this->{$field}->setDate(1, 0, 0);
         } else {
             $dt = Carbon::createFromFormat($this->traitDateFormat, $value);
             $new = $this->{$field}->setDate($dt->year, $dt->month, $dt->day);
