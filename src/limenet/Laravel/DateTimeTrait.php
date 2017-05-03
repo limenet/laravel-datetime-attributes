@@ -6,10 +6,6 @@ use Carbon\Carbon;
 
 trait DateTimeTrait
 {
-    public function getFullnameAttribute()
-    {
-        return $this->type->name.': '.$this->name;
-    }
 
     private function initializeDate($field)
     {
