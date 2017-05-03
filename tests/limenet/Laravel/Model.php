@@ -8,6 +8,10 @@ class Model extends Base
 {
     use DateTimeTrait;
 
+    public $timestamps = false;
+
+    protected $dates = ['start'];
+
     public function getStartDateAttribute()
     {
         return $this->dtGetDate('start');
