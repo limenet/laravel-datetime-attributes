@@ -1,9 +1,9 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model as Base;
 use limenet\Laravel\Model;
 use PHPUnit\Framework\TestCase;
-use Carbon\Carbon;
 
 class TraitTest extends TestCase
 {
