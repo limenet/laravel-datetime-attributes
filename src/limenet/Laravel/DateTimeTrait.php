@@ -4,7 +4,8 @@ namespace limenet\Laravel;
 
 use Carbon\Carbon;
 
-trait DateTimeTrait {
+trait DateTimeTrait
+{
     public function getFullnameAttribute()
     {
         return $this->type->name.': '.$this->name;
