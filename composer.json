@@ -1,0 +1,29 @@
+{
+    "name": "limenet/laravel-datetime-attributes",
+    "description": "Set a datetime attribute separately using a date and a time. This is especially helpful for input[type=date] and input[type=time].",
+    "type": "library",
+    "require": {
+        "illuminate/database": "^5.4",
+        "nesbot/carbon": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Linus Metzler",
+            "email": "linus.metzler@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "limenet\\": "src/limenet/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "limenet\\": "tests/limenet"
+        }
+    }
+}
