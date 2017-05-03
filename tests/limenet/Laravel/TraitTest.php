@@ -8,12 +8,12 @@ class TraitTest extends TestCase
 {
     protected $model;
 
-    protected function setUp() : void
+    protected function setUp()
     {
         $this->model = new Model();
     }
 
-    public function testInitialized() : void
+    public function testInitialized()
     {
         $this->assertInstanceOf(Base::class, $this->model);
     }
