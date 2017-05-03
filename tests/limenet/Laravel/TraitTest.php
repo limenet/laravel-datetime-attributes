@@ -1,9 +1,8 @@
 <?php
 
-use limenet\Laravel\DateTimeTrait;
-use PHPUnit\Framework\TestCase;
 use Illuminate\Database\Eloquent\Model as Base;
 use limenet\Laravel\Model;
+use PHPUnit\Framework\TestCase;
 
 class TraitTest extends TestCase
 {

@@ -3,7 +3,6 @@
 namespace limenet\Laravel;
 
 use Illuminate\Database\Eloquent\Model as Base;
-use limenet\Laravel\DateTimeTrait;
 
 class Model extends Base
 {
