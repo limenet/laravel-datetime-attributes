@@ -559,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codacy/php-codacy-coverage.git",
-                "reference": "9bc586f60ba44ad0d979b8bb86a980137bf9b9d4"
+                "reference": "83b7905773e703036294d15e40fbc293deddf58d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codacy/php-codacy-coverage/zipball/9bc586f60ba44ad0d979b8bb86a980137bf9b9d4",
-                "reference": "9bc586f60ba44ad0d979b8bb86a980137bf9b9d4",
+                "url": "https://api.github.com/repos/codacy/php-codacy-coverage/zipball/83b7905773e703036294d15e40fbc293deddf58d",
+                "reference": "83b7905773e703036294d15e40fbc293deddf58d",
                 "shasum": ""
             },
             "require": {
@@ -596,7 +596,7 @@
             ],
             "description": "Sends PHP test coverage information to Codacy.",
             "homepage": "https://github.com/codacy/php-codacy-coverage",
-            "time": "2017-09-07T16:52:29+00:00"
+            "time": "2017-09-28T13:10:45+00:00"
         },
         {
             "name": "doctrine/instantiator",
