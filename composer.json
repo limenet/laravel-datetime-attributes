@@ -1,31 +1,31 @@
 {
-    "name": "limenet/laravel-datetime-attributes",
-    "description": "Set a datetime attribute separately using a date and a time. This is especially helpful for input[type=date] and input[type=time].",
-    "type": "library",
-    "require": {
-        "illuminate/database": "5.4.* || 5.5.* || 5.6.*",
-        "nesbot/carbon": "^1.0",
-        "php": ">=7.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.2",
-        "codacy/coverage": "dev-master"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Linus Metzler",
-            "email": "linus.metzler@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "limenet\\": "src/limenet/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "limenet\\": "tests/limenet"
-        }
+  "name": "limenet/laravel-datetime-attributes",
+  "description": "Set a datetime attribute separately using a date and a time. This is especially helpful for input[type=date] and input[type=time].",
+  "type": "library",
+  "require": {
+    "illuminate/database": "5.4.* || 5.5.* || 5.6.* || 5.7.*",
+    "nesbot/carbon": "^1.0",
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2",
+    "codacy/coverage": "dev-master"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Linus Metzler",
+      "email": "linus.metzler@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "limenet\\": "src/limenet/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "limenet\\": "tests/limenet"
+    }
+  }
 }
