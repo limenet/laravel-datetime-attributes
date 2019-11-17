@@ -17,7 +17,7 @@ trait DateTimeTrait
         if (!$this->{$field}) {
             $this->{$field} = new Carbon();
         }
-        if(!array_key_exists($field, $this->traitNullRequested)){
+        if (!array_key_exists($field, $this->traitNullRequested)) {
             $this->traitNullRequested[$field] = ['date' => false, 'time' => false];
         }
     }
@@ -56,7 +56,7 @@ trait DateTimeTrait
         if ($value) {
             $datetime = Carbon::createFromFormat($this->traitTimeFormat, $value);
             $new = $this->{$field}->setTime($datetime->hour, $datetime->minute, 0);
-        }else{
+        } else {
             $this->traitNullRequested[$field]['time'] = true;
         }
 
@@ -64,12 +64,13 @@ trait DateTimeTrait
         $this->dtCheckFieldNullRequested($field);
     }
 
-    private function dtCheckFieldNullRequested($field){
-        $nullRequestedOnAllFields = array_reduce($this->traitNullRequested[$field], function($a, $carry){
+    private function dtCheckFieldNullRequested($field)
+    {
+        $nullRequestedOnAllFields = array_reduce($this->traitNullRequested[$field], function ($a, $carry) {
             return $a && $carry;
         }, true);
 
-        if($nullRequestedOnAllFields){
+        if ($nullRequestedOnAllFields) {
             $this->attributes[$field] = null;
         }
     }
