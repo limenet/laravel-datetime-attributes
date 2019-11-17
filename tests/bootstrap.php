@@ -20,5 +20,5 @@ $capsule->bootEloquent();
 
 Capsule::schema()->create('models', function ($table) {
     $table->increments('id');
-    $table->datetime('start');
+    $table->datetime('start')->nullable();
 });

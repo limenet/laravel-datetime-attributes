@@ -96,4 +96,14 @@ class TraitTest extends TestCase
         $this->assertSame('23:15', $this->model->start_time);
         $this->assertSame('23:15', Model::find($this->model->id)->start_time);
     }
+
+    public function testSetDateTimeNull()
+    {
+        $this->model->start_date = null;
+        $this->model->start_time = null;
+        $this->model->save();
+
+        $this->assertNull($this->model->start_time);
+        $this->assertNull(Model::find($this->model->id)->start_time);
+    }
 }
