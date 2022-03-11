@@ -32,6 +32,6 @@ jobs:
         run: composer run-script test
 
       - name: Run codacy-coverage-reporter
-        uses: codacy/codacy-coverage-reporter-action@v1
+        uses: codecov/codecov-action@v2
         with:
-          coverage-reports: clover.xml
+          files: clover.xml
