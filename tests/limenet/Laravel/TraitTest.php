@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model as Base;
 use limenet\Laravel\Model;
@@ -9,23 +11,23 @@ class TraitTest extends TestCase
 {
     protected $model;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->model = new Model();
     }
 
-    public function testInitialized()
+    public function testInitialized(): void
     {
         $this->assertInstanceOf(Base::class, $this->model);
     }
 
-    public function testDateAttributeClass()
+    public function testDateAttributeClass(): void
     {
         $this->model->start = Carbon::parse('2014-05-28 23:15');
         $this->assertInstanceOf(Carbon::class, $this->model->start);
     }
 
-    public function testDateAttributeAfterSaveClass()
+    public function testDateAttributeAfterSaveClass(): void
     {
         $this->model->start = Carbon::parse('2014-05-28 23:15');
         $this->model->save();
@@ -34,12 +36,12 @@ class TraitTest extends TestCase
         $this->assertInstanceOf(Carbon::class, Model::find($this->model->id)->start);
     }
 
-    public function testEmptyDateAttributeClass()
+    public function testEmptyDateAttributeClass(): void
     {
         $this->assertNull($this->model->start);
     }
 
-    public function testGetDate()
+    public function testGetDate(): void
     {
         $this->model->start = Carbon::parse('2014-05-28 23:15');
         $this->model->save();
@@ -48,7 +50,7 @@ class TraitTest extends TestCase
         $this->assertSame('2014-05-28', Model::find($this->model->id)->start_date);
     }
 
-    public function testGetTime()
+    public function testGetTime(): void
     {
         $this->model->start = Carbon::parse('2014-05-28 23:15');
         $this->model->save();
@@ -57,7 +59,7 @@ class TraitTest extends TestCase
         $this->assertSame('23:15', Model::find($this->model->id)->start_time);
     }
 
-    public function testSetDate()
+    public function testSetDate(): void
     {
         $this->model->start_date = '2014-05-28';
         $this->model->save();
@@ -66,7 +68,7 @@ class TraitTest extends TestCase
         $this->assertSame('2014-05-28', Model::find($this->model->id)->start_date);
     }
 
-    public function testSetTime()
+    public function testSetTime(): void
     {
         $this->model->start_time = '23:15';
         $this->model->save();
@@ -75,7 +77,7 @@ class TraitTest extends TestCase
         $this->assertSame('23:15', Model::find($this->model->id)->start_time);
     }
 
-    public function testSetEmptyTime()
+    public function testSetEmptyTime(): void
     {
         $this->model->start_date = '2014-05-28';
         $this->model->start_time = null;
@@ -87,7 +89,7 @@ class TraitTest extends TestCase
         $this->assertSame('2014-05-28', Model::find($this->model->id)->start_date);
     }
 
-    public function testSetEmptyDate()
+    public function testSetEmptyDate(): void
     {
         $this->model->start_date = null;
         $this->model->start_time = '23:15';
@@ -97,7 +99,7 @@ class TraitTest extends TestCase
         $this->assertSame('23:15', Model::find($this->model->id)->start_time);
     }
 
-    public function testSetDateTimeNull()
+    public function testSetDateTimeNull(): void
     {
         $this->model->start_date = null;
         $this->model->start_time = null;

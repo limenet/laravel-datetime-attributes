@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace limenet\Laravel;
 
 use Carbon\Carbon;
@@ -12,12 +14,12 @@ trait DateTimeTrait
 
     private $traitNullRequested = [];
 
-    private function initializeDate($field)
+    private function initializeDate($field): void
     {
         if (!$this->{$field}) {
             $this->{$field} = new Carbon();
         }
-        if (!array_key_exists($field, $this->traitNullRequested)) {
+        if (!\array_key_exists($field, $this->traitNullRequested)) {
             $this->traitNullRequested[$field] = ['date' => false, 'time' => false];
         }
     }
@@ -27,7 +29,7 @@ trait DateTimeTrait
         return $this->{$field} ? $this->{$field}->format($this->traitDateFormat) : null;
     }
 
-    private function dtSetDate($field, $value)
+    private function dtSetDate($field, $value): void
     {
         $this->initializeDate($field);
         $new = $this->{$field}->setDate(1, 0, 0);
@@ -48,7 +50,7 @@ trait DateTimeTrait
         return $this->{$field} ? $this->{$field}->format($this->traitTimeFormat) : null;
     }
 
-    private function dtSetTime($field, $value)
+    private function dtSetTime($field, $value): void
     {
         $this->initializeDate($field);
         $new = $this->{$field}->setTime(0, 0, 0);
@@ -64,11 +66,9 @@ trait DateTimeTrait
         $this->dtCheckFieldNullRequested($field);
     }
 
-    private function dtCheckFieldNullRequested($field)
+    private function dtCheckFieldNullRequested($field): void
     {
-        $nullRequestedOnAllFields = array_reduce($this->traitNullRequested[$field], function ($a, $carry) {
-            return $a && $carry;
-        }, true);
+        $nullRequestedOnAllFields = array_reduce($this->traitNullRequested[$field], fn ($a, $carry) => $a && $carry, true);
 
         if ($nullRequestedOnAllFields) {
             $this->attributes[$field] = null;
