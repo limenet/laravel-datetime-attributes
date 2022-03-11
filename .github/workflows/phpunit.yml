@@ -29,7 +29,7 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: Run test suite
-        run: composer run-script test
+        run: XDEBUG_MODE=coverage composer run-script test
 
       - name: Run codacy-coverage-reporter
         uses: codecov/codecov-action@v2
