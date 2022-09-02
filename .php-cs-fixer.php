@@ -8,7 +8,8 @@ $rules = [
     '@Symfony:risky' => true,
     '@PHP80Migration' => true,
     '@PHP80Migration:risky' => true,
-    '@PSR12:risky' => true,
+    '@PER' => true,
+    '@PER:risky' => true,
 ];
 
 $project_path = getcwd();
