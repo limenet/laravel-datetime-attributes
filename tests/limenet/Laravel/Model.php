@@ -12,7 +12,7 @@ class Model extends Base
 
     public $timestamps = false;
 
-    protected $dates = ['start'];
+    protected $casts = ['start' => 'datetime'];
 
     public function getStartDateAttribute()
     {
