@@ -9,17 +9,19 @@ use Carbon\Carbon;
 trait DateTimeTrait
 {
     protected $traitDateFormat = 'Y-m-d';
+
     protected $traitTimeFormat = 'H:i';
+
     protected $traitDateTimeFormat = 'Y-m-d H:i:s';
 
     private $traitNullRequested = [];
 
     private function initializeDate($field): void
     {
-        if (!$this->{$field}) {
+        if (! $this->{$field}) {
             $this->{$field} = new Carbon();
         }
-        if (!\array_key_exists($field, $this->traitNullRequested)) {
+        if (! \array_key_exists($field, $this->traitNullRequested)) {
             $this->traitNullRequested[$field] = ['date' => false, 'time' => false];
         }
     }
