@@ -39,7 +39,7 @@
       "@composer bin all update --ansi"
     ],
     "ci-lint": [
-      "./vendor/bin/php-cs-fixer fix --diff",
+      "./vendor-bin/phpcs/vendor/bin/php-cs-fixer fix --diff",
       "./vendor/bin/phpstan analyse -vvv --memory-limit 1G"
     ]
   },
