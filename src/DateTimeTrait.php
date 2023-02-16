@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace limenet\Laravel;
+namespace Limenet\LaravelDatetimeAttributes;
 
 use Carbon\Carbon;
 

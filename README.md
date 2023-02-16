@@ -1,10 +1,9 @@
-# laravel-datetime-attributes
+# This is my package laravel-datetime-attributes
 
-[![Build Status](https://travis-ci.org/limenet/laravel-datetime-attributes.svg?branch=master)](https://travis-ci.org/limenet/laravel-datetime-attributes)
-[![Latest Stable Version](https://poser.pugx.org/limenet/laravel-datetime-attributes/v/stable)](https://packagist.org/packages/limenet/laravel-datetime-attributes)
-[![License](https://poser.pugx.org/limenet/laravel-datetime-attributes/license)](https://packagist.org/packages/limenet/laravel-datetime-attributes)
-[![Total Downloads](https://poser.pugx.org/limenet/laravel-datetime-attributes/downloads)](https://packagist.org/packages/limenet/laravel-datetime-attributes)
-[![codecov](https://codecov.io/gh/limenet/laravel-datetime-attributes/branch/master/graph/badge.svg)](https://codecov.io/gh/limenet/laravel-datetime-attributes)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/limenet/laravel-datetime-attributes.svg?style=flat-square)](https://packagist.org/packages/limenet/laravel-datetime-attributes)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/limenet/laravel-datetime-attributes/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/limenet/laravel-datetime-attributes/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/limenet/laravel-datetime-attributes/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/limenet/laravel-datetime-attributes/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/limenet/laravel-datetime-attributes.svg?style=flat-square)](https://packagist.org/packages/limenet/laravel-datetime-attributes)
 
 Set a `datetime` attribute separately using a `date` and a `time`. This is especially helpful for `input[type=date]` and `input[type=time]`
 
@@ -14,7 +13,7 @@ Set a `datetime` attribute separately using a `date` and a `time`. This is espec
 <?php
 
 use Illuminate\Database\Eloquent\Model as Base;
-use limenet\Laravel\DateTimeTrait;
+use Limenet\LaravelDatetimeAttributes\DateTimeTrait;
 
 class Model extends Base
 {

@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace limenet\Laravel;
+namespace Limenet\LaravelDatetimeAttributes\Tests;
 
 use Illuminate\Database\Eloquent\Model as Base;
+use Limenet\LaravelDatetimeAttributes\DateTimeTrait;
 
 class Model extends Base
 {

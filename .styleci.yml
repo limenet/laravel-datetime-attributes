@@ -1,9 +1,0 @@
-php:
-  preset: recommended
-  risky: true
-  enabled:
-    - dir_constant
-    - modernize_types_casting
-    - random_api_migration
-    - strict_comparison
-    - strict_param
