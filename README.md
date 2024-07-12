@@ -1,4 +1,4 @@
-# This is my package laravel-datetime-attributes
+# Laravel Datetime Attributes
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/limenet/laravel-datetime-attributes.svg?style=flat-square)](https://packagist.org/packages/limenet/laravel-datetime-attributes)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/limenet/laravel-datetime-attributes/run-tests.yml?branch=master&label=tests&style=flat-square)](https://github.com/limenet/laravel-datetime-attributes/actions?query=workflow%3Arun-tests+branch%3Amaster)
