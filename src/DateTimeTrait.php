@@ -19,7 +19,7 @@ trait DateTimeTrait
     private function initializeDate($field): void
     {
         if (! $this->{$field}) {
-            $this->{$field} = new Carbon();
+            $this->{$field} = new Carbon;
         }
         if (! \array_key_exists($field, $this->traitNullRequested)) {
             $this->traitNullRequested[$field] = ['date' => false, 'time' => false];
